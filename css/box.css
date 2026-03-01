@@ -1,0 +1,21 @@
+* {
+    outline: 1px solid red;
+}
+
+.container{
+    background-color: lightblue;
+    height: 500px;
+    width: 500px;
+    border: 15px solid yellow;
+    padding: 30px;
+    margin: 40px;
+}
+
+.box {
+    background-color: lightcoral;
+    height: 250px;
+    width: 250px;
+    padding: 50px;
+    margin: 20px;
+    box-sizing: border-box;
+}
