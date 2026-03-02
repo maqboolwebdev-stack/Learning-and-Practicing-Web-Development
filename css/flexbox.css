@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: #F2F3F4;
+    height: 100vh;
+}
+
+.heading-flex {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    gap: 60px;
+}
+
+h1, h2 {
+    color: #4B3FCF;
+    padding: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    border-left: 2px solid #4B3FCF;
+    border-right: 2px solid #4B3FCF;
+}
+
+h2 {
+    border-top: 2px solid #4B3FCF;
+    border-bottom: 2px solid #4B3FCF;
+}
