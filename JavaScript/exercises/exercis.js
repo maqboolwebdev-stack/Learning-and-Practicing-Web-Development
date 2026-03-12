@@ -150,6 +150,8 @@ function largeNumber(arr) {
 
 console.log(largeNumber(numbers));
 
+// No 10
+
 let array = [3, 63, 3, 88, 33, 1, 9, 36, 4];
 function sumOfTripledEvens(array) {
   return array
@@ -160,3 +162,14 @@ function sumOfTripledEvens(array) {
 }
 
 console.log(sumOfTripledEvens(array));
+
+// No. 11
+
+function camelize(str) {
+  return str
+  .split('-')
+  .map((word, index) => index == 0 ? word : word[0].toUpperCase() + word.slice(1))
+  .join('')
+}
+
+console.log(camelize('the-man-of-sand'));
