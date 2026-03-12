@@ -185,3 +185,60 @@ let arr = [5, 3, 8, 13, 9, 20, 1];
 let filtered = filterRange(arr, 1, 10);
 console.log(filtered);
 console.log(arr);
+
+// No. 13
+
+function filterRangeInPlace(arr, a, b) {
+
+  for (let i = 0; i < arr.length; i++) {
+    let val = arr[i];
+
+    if (val < a || val > b) {
+      arr.splice(i, 1);
+      i--;
+    }
+  }
+
+}
+
+let arr2= [5, 3, 8, 1];
+
+filterRangeInPlace(arr2, 1, 4); 
+
+console.log(arr2);
+
+// No .14
+
+let num = [5, 2, 1, -10, 8];
+
+num.sort((a, b) => b - a);
+
+console.log(num);
+
+// No. 15
+
+function copySorted(arr) {
+  return arr.slice().sort();
+}
+
+let lang = ["HTML", "JavaScript", "CSS"];
+
+let sorted = copySorted(lang);
+
+console.log(sorted);
+console.log(lang);
+
+// No. 16
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * (i + 1));
+
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
+
+let shuffleArray = [1, 2, 3];
+
+shuffle(shuffleArray);
+
+console.log(shuffleArray);
