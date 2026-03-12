@@ -48,14 +48,82 @@ for(let i = 1; i <= 5; i++) {
   console.log(stars);
 }
 
-// reverse star pattern
-for(let i = 5; i <= 1; i++) {
 
-  let stars = "";
+let numbers = [1,2,3];
 
-  for(let j = 5; j >= i; j--) {
-    stars = stars + "*";
-  }
+numbers.forEach(function(num){
+  console.log(num);
+});
 
-  console.log(stars);
+let number2 = [1,2,3,4];
+
+let sum2 = number2.reduce(function(total, num){
+  return total + num;
+}, 0);
+
+console.log(sum2);
+
+
+const cats = ["Leopard", "Serval", "Jaguar", "Tiger", "Caracal", "Lion"];
+
+for (const cat of cats) {
+  console.log(cat);
 }
+
+
+function toUpper(string) {
+  return string.toUpperCase();
+}
+
+const upperCats = cats.map(toUpper);
+
+console.log(upperCats);
+
+
+function largeCat(cat) {
+  return cat.startsWith('L');
+}
+
+const filtered = cats.filter(largeCat);
+console.log(filtered);
+
+
+for(const cat of cats) {
+  console.log(cat);
+}
+
+for(let i = 0; i < cats.length; i++) {
+  console.log(cats[i]);
+}
+
+
+      //  Arrays
+
+let array = ['Olive', 'Banana', 'Mango', 'Orange'];
+
+console.log(array);
+
+array[1] = 'Caret';
+console.log(array);
+
+array.push('Lemon')
+console.log(array);
+array.pop();
+console.log(array);
+array.shift();
+console.log(array);
+array.unshift('Coke');
+console.log(array);
+console.log(array.length);
+console.log(array.at(-1));
+array.length = 1;
+console.log(array);
+
+let myArray = ['I', 'love', 'JavaScript'];
+
+myArray.splice(1, 1)
+console.log(myArray);
+myArray.splice(0, 2, "let's", 'dance');
+console.log(myArray);
+myArray.concat([1, 2], [2 ,3]);
+console.log(myArray);
