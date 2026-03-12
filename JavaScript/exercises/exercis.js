@@ -173,3 +173,15 @@ function camelize(str) {
 }
 
 console.log(camelize('the-man-of-sand'));
+
+// No. 12
+
+function filterRange(arr, a, b) {
+  return arr.filter(item => (a <= item && item <= b));
+}
+
+let arr = [5, 3, 8, 13, 9, 20, 1];
+
+let filtered = filterRange(arr, 1, 10);
+console.log(filtered);
+console.log(arr);
