@@ -1,0 +1,47 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #f1f2f3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 80vh;
+    gap: 40px;
+}
+
+input {
+    width: 250px;
+    height: 30px;
+    border-radius: 50px;
+    padding: 10px;
+}
+
+input[type="text"] {
+    border: 1px solid transparent;
+    color: gray;
+    outline: none;
+    letter-spacing: 2px;
+
+}
+
+input[type="text"]:focus {
+    border: 1px solid rgb(230, 97, 97);
+    letter-spacing: 2px;
+    font-weight: 100;
+    color: gray;
+}
+
+p {
+    color: rgb(27, 25, 25);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+span {
+    font-size: 32px;
+    color: blueviolet;
+}
