@@ -19,3 +19,12 @@ details[open] summary {
   border-bottom: 1px solid #aaaaaa;
   margin-bottom: 0.5em;
 }
+
+
+.class {
+  background-color: #fff;
+  width: 30px;
+  height: 45px;
+  color: #aaaaaa;
+  display: flex;
+}
