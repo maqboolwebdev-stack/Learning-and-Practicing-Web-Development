@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-size: 1rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+    background-color: hsl(0, 0%, 3%);
+    height: 10%;
+}
+
+main {
+  flex: 1;
+  background-color: hsl(0, 0%, 100%);
+}
+
+main > p {
+    line-height: 1.5;
+    font-size: calc(1.2em + 1vh);
+    word-spacing: 0.3rem;
+    word-break: break-all;
+    hyphens: auto;
+    margin: 20px auto;
+}
+
+main p:nth-child(even){color: maroon;}
+main p:nth-child(odd){color: rgb(223, 75, 16);}
+
+footer {
+    height: 8%;
+  background-color: hsl(251, 41%, 37%);
+}
