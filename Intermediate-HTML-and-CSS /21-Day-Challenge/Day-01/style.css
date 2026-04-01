@@ -1,0 +1,31 @@
+*{box-sizing: border-box;}
+body{margin: 0;}
+
+.parent {
+    background-color: rgb(207, 236, 39);
+    padding: 50px;
+    /* width: 900px; */
+    width: 80%;
+    height: 40%;
+    margin: 0 auto;
+    /* overflow: hidden; */
+}
+
+.child {
+    background-color: rgb(109, 109, 199);
+    /* width: 750px; */
+    /* width: 50%; */
+    /* width: 80%; */
+    width: 10%;
+    height: 250px;
+}
+
+.container {
+    background-color: magenta;
+    color: white;
+    width: 80%;
+    margin: 0 auto;
+    /* height: 300px; */
+    /* padding: 30px; */
+    padding: 5rem; /* 16 * 5 = 80px */
+}
