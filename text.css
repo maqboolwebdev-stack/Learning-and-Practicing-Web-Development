@@ -1,0 +1,60 @@
+@font-face {
+  font-family: "NeueMachina";
+  src: url("./neue-machina-free-for-personal-use/NeueMachina-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("./neue-machina-free-for-personal-use/NeueMachina-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NeueMachina";
+  src: url("./neue-machina-free-for-personal-use/NeueMachina-Ultrabold.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+span {
+  text-transform: capitalize;
+}
+strong {
+  float: right;
+}
+
+p {
+    color:black;
+    text-shadow: 3px 2px 16px rgba(76, 0, 255, 0.774);
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+body {
+    background-color: gold;
+    display: grid;
+    place-items: center;
+    height: 50vh;
+    overflow: hidden;
+    font-family: "NeueMachina", sans-serif;
+    font-weight: 800;
+}
+
+h1 {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background-color: white;
+    padding: 20px;
+    font-size: 1.3rem;
+    margin: 0;
+    resize: horizontal;
+}
+
