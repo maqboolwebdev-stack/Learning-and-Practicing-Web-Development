@@ -1,0 +1,82 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: rgb(204, 173, 230);
+}
+
+nav h2 a {
+    font-size: clamp(1rem, 0.75rem + 2.5vw, 3rem);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+nav div {
+    display: flex;
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 2rem);
+    gap: 2rem;
+    transition: all 0.15s ease;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+nav div p:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.6rem;
+    cursor: pointer;
+}
+
+/* Main styling */
+
+main {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    min-height: 80vh;
+    padding: 1.5rem;
+}
+
+.box {
+    flex: 1;
+    min-width: 18rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
+
+.large-box {
+    flex: 2;
+    background-color: rgb(173, 182, 230);
+}
+
+.content1{background-color: rgb(173, 216, 230);}
+.content3{background-color: rgb(221, 173, 230);}
+.content4{background-color: rgb(230, 217, 173);}
+.content6{background-color: rgb(178, 230, 173);}
+
+footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    background-color: lightcoral;
+    font-size: clamp(1rem, 0.75rem + 1.5vw, 2rem);
+}
