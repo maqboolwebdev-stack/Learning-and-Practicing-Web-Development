@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+div {
+    width: 50vmin;
+    height: 50vmin;
+    font-size: 3vmin;
+    margin: auto;
+    border: 1px solid red;
+    padding: 1rem;
+}
