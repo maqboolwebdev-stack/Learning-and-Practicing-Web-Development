@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* main > div > div {
+    width: 15vw;
+    height: 15vh;
+    border: 1px solid salmon;
+} */
+
+/* .group1 + div + div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+} */
+
+.group1 ~ div {
+    width: 100px;
+    height: 100px;
+    border: 1px solid red;
+}
+
+.group1 > div::selection {
+    background-color: red;
+    color: rgb(255, 251, 0);
+}
+
+.group1 > div::first-line {
+    background-color: rgb(255, 251, 0);
+    color: red;
+}
+
+.group1 > div::first-letter {
+    background-color: black;
+    color: wheat;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 150%;
+}
+
+.group1 > div::after {
+    color: black;
+    content: ' hey I am ::after ➥';
+}
+
+.group1 > div::before {
+    color: black;
+    content: ' hey I am ::before';
+}
+
+.links {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    font-size: 200%;
+}
+
+a:link {
+    color: green;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+a:visited {
+    color: magenta;
+}
+
+a:active {
+    color: aqua;
+}
