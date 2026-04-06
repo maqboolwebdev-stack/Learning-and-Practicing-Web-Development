@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.5;
+}
+
+.hero-container {
+    background-color: #23424A;
+}
+
+.hero {
+    min-height: 70vh;
+    max-width: 50vmax;
+    padding: 6rem;
+}
+
+h1 {
+    font-size: clamp(1rem, 1rem + 1.5vw, 3rem);
+    color: white;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.31rem);
+    color: rgb(224, 222, 222);
+    margin-bottom: 3rem;
+}
+
+button {
+    background-color: #38ced9;
+    font-weight: bold;
+    font-size: clamp(0.5rem, 0.75rem + 1.5vw, 1.31rem);
+    padding: 1rem 2.5rem;
+    border-radius: calc(2rem + 0.5vw);
+    cursor: pointer;
+}
