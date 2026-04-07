@@ -5,26 +5,47 @@
 }
 
 body {
-    height: 100vh;
+    height: 300vh;
     padding: 2rem;
 }
 
 .container {
-    padding: 2rem;
-    border: 2px solid red;
-    height: 80%;
-    display: flex;
-    gap: 2rem;
+    padding: 5rem;
+    border: 5px solid red;
+    /* position: relative; */
 }
 
 .box {
     border: 1px solid red;
-    height: 200px;
-    width: 200px;
-    /* margin-bottom: 2rem; */
+    height: 500px;
+    width: 500px;
+    margin-bottom: 2rem;
+    border-radius: 50%;
+}
+
+.box1 {
+    background-color: pink;
+    /* z-index: 2; */
+    position: sticky;
+    top: 0px;
+    left: 50%;
+}
+
+.box3 {
+    background-color: rosybrown;
+    position: absolute;
+    top: 0;
+}
+
+.box4 {
+    background-color: royalblue;
+    position: relative;
+    top: 200px;
 }
 
 .box2 {
-    position: relative;
     background-color: violet;
+    position: fixed;
+    right: 0px;
+    top: 120px;
 }
