@@ -29,9 +29,9 @@ let animals = ['dog', 'cat', 'cow', 'loin', 'dog'];
 let cars = ['ferrari', 'mercedes'];
 let emptyArray = [];
 
-console.log('length of animals:',animals.length);
-console.log('length of cars:',cars.length);
-console.log('length of emptyArray:',emptyArray.length);
+console.log('length of animals:', animals.length);
+console.log('length of cars:', cars.length);
+console.log('length of emptyArray:', emptyArray.length);
 
 // Exercise 3.1
 
@@ -48,8 +48,8 @@ console.log(shoppingList);
 let favoriteFruits = ['melon', 'guava', 'orange'];
 favoriteFruits.push('mango');
 
-favoriteFruits.splice(2, 0,'waterMelon', 'gapes');
-favoriteFruits.splice(2, 10,'waterMelon', 'gapes');
+favoriteFruits.splice(2, 0, 'waterMelon', 'gapes');
+favoriteFruits.splice(2, 10, 'waterMelon', 'gapes');
 // favoriteFruits.splice(2, 2,'waterMelon', 'gapes');
 console.log(favoriteFruits);
 
@@ -83,7 +83,7 @@ console.log(arr8);
 
 // Finding elements
 
-let findValue = arr8.find(function(e)  {return e === 6});
+let findValue = arr8.find(function (e) { return e === 6 });
 let findValue2 = arr8.find(e => e === 10);
 
 console.log(findValue, findValue2);
@@ -121,7 +121,7 @@ shoppingList2 = ['Milk', 'Bread', 'Apples'];
 shoppingList2.splice(1, 1, 'Banana', 'Eggs');
 shoppingList2.pop();
 shoppingList2.sort();
-console.log(shoppingList2.indexOf('Milk')); 
+console.log(shoppingList2.indexOf('Milk'));
 shoppingList2.splice(1, 0, 'Carrots', 'Lettuce');
 console.log(shoppingList2);
 
@@ -159,8 +159,202 @@ console.log(typeof arr);
 
 let dog = {
     dogName: 'JavaScript',
+    color: 'brown',
     weight: 2.4,
     breed: 'chihuahua',
     age: 3,
     burglarBitter: true,
 }
+
+let dogColor1 = dog['color'];
+let dogColor2 = dog.color;
+dog['color'] = 'blue';
+dog.weight = 2.3;
+
+console.log(dogColor1);
+console.log(dogColor2);
+
+console.log(dog);
+
+// Practice Exercise 3.4
+
+let myCar = {
+    make: 'Toyota',
+    model: 'Land cruiser',
+    color: 'white',
+    release: 2033,
+    isZeroMeter: true,
+}
+
+let variable = 'color';
+
+console.log(myCar[variable]);
+
+myCar[variable] = 'black';
+
+console.log(myCar[variable]);
+
+variable = 'forSale';
+
+myCar[variable] = false;
+
+console.log(myCar.make, myCar.model);
+
+console.log(myCar['forSale']);
+
+let company = {
+    companyName: "Healthy Candy",
+    activity: "food manufacturing",
+    address: {
+        street: "2nd street",
+        number: "123",
+        zipcode: "33116",
+        city: "Miami",
+        state: "Florida",
+    },
+    yearOfEstablishment: 2021,
+};
+
+console.log(company.address.zipcode);
+console.log(company["address"]["city"]);
+
+company = {
+    companyName: "Healthy Candy",
+    activities: [
+        "food manufacturing",
+        "improving kids' health",
+        "manufacturing toys",
+    ],
+    address: {
+        street: "2nd street",
+        number: "123",
+        zipcode: "33116",
+        city: "Miami",
+        state: "Florida",
+    },
+    yearOfEstablishment: 2021,
+};
+
+console.log(company.activities[1]);
+
+let addresses = [
+    {
+        street: "2nd street",
+        number: "123",
+        zipcode: "33116",
+        city: "Miami",
+        state: "Florida",
+    },
+    {
+        street: "1st West avenue",
+        number: "5",
+        zipcode: "75001",
+        city: "Addison",
+        state: "Texas",
+    },
+];
+
+console.log(addresses[1].city);
+
+company = {
+    companyName: "Healthy Candy",
+    activities: [
+        "food manufacturing",
+        "improving kids' health",
+        "manufacturing toys",
+    ],
+    address: [
+        {
+            street: "2nd street",
+            number: "123",
+            zipcode: "33116",
+            city: "Miami",
+            state: "Florida",
+        },
+        {
+            street: "1st West avenue",
+            number: "5",
+            zipcode: "75001",
+            city: "Addison",
+            state: "Texas",
+        },
+    ],
+    yearOfEstablishment: 2021,
+};
+
+console.log(company.address[0].street);
+
+// Practice Exercise 3.5
+
+let people = {
+    friends: []
+};
+
+let friend1 = {
+    firstName: 'Maria',
+    lastName: 'Albert',
+    id: 1,
+}
+
+let friend2 = {
+    firstName: 'Zoa',
+    lastName: 'de',
+    id: 2,
+}
+
+let friend3 = {
+    firstName: 'mani',
+    lastName: 'foo',
+    id: 3,
+}
+
+people.friends = [friend1, friend2, friend3];
+
+console.log(people.friends[0].firstName);
+
+// Chapter Projects
+
+const theList = ['Laurence', 'Svekis', true, 35, null, undefined];
+
+theList.pop();
+theList.pop();
+theList.push('LAST');
+theList.shift();
+theList.unshift('FIRST');
+theList[2] = 'MIDDLE';
+theList[3] = 'Hello World!';
+
+console.log(theList);
+
+
+
+const inventory = [];
+
+let item1 = {
+    itemName: 'Olive Oil',
+    model: 'Extra virgin',
+    cost: 4000,
+    quantity: 10,
+}
+let item2 = {
+    itemName: 'Green Tea',
+    model: 'Tal',
+    cost: 250,
+    quantity: 30,
+}
+let item3 = {
+    itemName: 'Rice',
+    model: 'Double Steam',
+    cost: 550,
+    quantity: 4,
+}
+
+inventory.push(item1, item2, item3);
+
+console.log(inventory[2].quantity);
+
+inventory[0].I = 'Love this'
+inventory[1].mine = 'yes'
+inventory[2].my = 'favorite'
+
+console.log(inventory);
