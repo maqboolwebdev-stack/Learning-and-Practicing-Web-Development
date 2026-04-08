@@ -1,0 +1,55 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #30dd20;
+}
+
+body {
+    min-height: 100dvh;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    background-color: #fff;
+    padding: clamp(1rem, 4vw, 2rem);
+    width: min(80%, 600px);
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+h1 {
+    font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+}
+
+p {
+    font-size: clamp(1rem, 2.5vw, 1.5rem);
+    max-width: 60ch;
+}
+
+button {
+    font-size: clamp(0.9rem, 2.3vw, 1.3rem);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 100px;
+    color: white;
+    font-weight: bold;
+    background-color: var(--primary);
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+button:active {
+    transform: scale(0.98);
+}
