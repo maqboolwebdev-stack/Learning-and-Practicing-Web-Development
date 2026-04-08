@@ -1,0 +1,39 @@
+:root {
+    --primary-bg: #f1efef;
+    --primary-clr: purple;
+    --text-clr: #e45936;
+    --p-font-size: clamp(.8rem, 5vw, 1.3rem);
+    --h1-font-size: clamp(1.5rem, 8vw, 2.3rem);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.5;
+}
+
+body {
+    background-color: var(--primary-bg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    margin: auto;
+    width: 70%;
+    max-width: 850px;
+}
+
+p {
+    color: var(--text-clr);
+    padding: 1rem;
+    word-break: keep-all;
+    hyphens: auto;
+    font-size: var(--p-font-size);
+}
+
+h1 {
+    color: var(--primary-clr);
+    padding: 1rem;
+    font-size: var(--h1-font-size);
+}
