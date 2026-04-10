@@ -52,6 +52,7 @@ h1 {
     width: 100%;
     text-align: center;
     margin-left: 20px;
+    padding: 3em 0;
 }
 
 .hero {
@@ -87,7 +88,7 @@ h1 {
 .footer {
     background: #23424A;
     color: white;
-    padding: 3rem;
+    /* padding: 3em 0; */
 }
 
 .main h2 {
