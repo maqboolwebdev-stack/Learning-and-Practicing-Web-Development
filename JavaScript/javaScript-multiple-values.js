@@ -358,3 +358,28 @@ inventory[1].mine = 'yes'
 inventory[2].my = 'favorite'
 
 console.log(inventory);
+
+// Self check quiz
+
+const constArray = [2,2];
+constArray[1] = 3;
+console.log(constArray);
+console.log(constArray.length);
+
+const myArray1 = [1, 3, 5, 6, 8, 9, 15];
+console.log(myArray1.indexOf(0));
+console.log(myArray1.indexOf(3));
+
+myArray1[1] = 4;
+console.log(myArray1);
+
+const myArray2 = [];
+myArray2[10] = 'test';
+console.log(myArray2);
+console.log(myArray2[2]);
+
+const myArray3 = [3, 6, 8, 9, 3, 55, 553, 434];
+myArray3.sort();
+// myArray3.length = 0;
+
+console.log(myArray3);
