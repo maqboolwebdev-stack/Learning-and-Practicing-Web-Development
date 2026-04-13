@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Input types</title>
+  </head>
+  <body>
+    <input type="email" id="email" name="email" multiple />
+    <input type="search" id="search" name="search" />
+    <input type="tel" id="tel" name="tel" />
+    <input type="url" id="url" name="url" />
+    <input type="number" id="number" name="number" />
+    <input type="number" name="age" id="age" min="1" max="10" step="2" />
+    <label for="price">Choose a maximum house price: </label>
+    <input
+      type="range"
+      name="price"
+      id="price"
+      min="1"
+      max="100"
+      step="1"
+      value="16"
+    />
+    <output class="price-output" for="price"></output>
+    <input type="date" name="date" id="date" />
+    <input type="datetime-local" name="datetime" id="datetime" />
+    <input type="month" name="month" id="month" />
+    <input type="time" name="time" id="time" />
+    <input type="week" name="week" id="week" />
+    <label for="myDate">When are you available this summer?</label><br />
+    <input
+      type="date"
+      name="myDate"
+      min="2025-06-01"
+      max="2025-08-31"
+      step="7"
+      id="myDate"
+    />
+    <input type="color" name="color" id="color" />
+    <script>
+      const price = document.querySelector("#price");
+      const output = document.querySelector(".price-output");
+
+      output.textContent = price.value;
+
+      price.addEventListener("input", () => {
+        output.textContent = price.value;
+      });
+    </script>
+  </body>
+</html>
