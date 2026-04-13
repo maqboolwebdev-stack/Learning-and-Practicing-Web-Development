@@ -51,3 +51,160 @@ label {
 p label {
   width: 100%;
 }
+
+fieldset {
+  position: relative;
+}
+
+legend {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  color: white;
+  padding: .2em;
+}
+
+input {
+  appearance: none;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+}
+
+input[type="checkbox"] {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border: 1px solid gray;
+  /* Adjusts the position of the checkboxes on the text baseline */
+  vertical-align: -2px;
+  /* Set here so that Windows' High-Contrast Mode can override */
+  color: green;
+}
+
+input[type="checkbox"]::before {
+  content: "✔";
+  position: absolute;
+  font-size: 1.2em;
+  right: -1px;
+  top: -0.3em;
+  visibility: hidden;
+}
+
+input[type="checkbox"]:checked::before {
+  /* Use `visibility` instead of `display` to avoid recalculating layout */
+  visibility: visible;
+}
+
+input[type="checkbox"]:disabled {
+  border-color: black;
+  background: #dddddd;
+  color: gray;
+}
+
+select,
+::picker(select) {
+  appearance: base-select;
+}
+
+select {
+  border: 2px solid #dddddd;
+  background: #eeeeee;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+select:hover,
+select:focus {
+  background: #dddddd;
+}
+
+select::picker-icon {
+  color: #999999;
+  transition: 0.4s rotate;
+}
+
+select:open::picker-icon {
+  rotate: 180deg;
+}
+
+::picker(select) {
+  border: none;
+}
+
+option {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+
+  border: 2px solid #dddddd;
+  background: #eeeeee;
+  padding: 10px;
+  transition: 0.4s;
+}
+
+option:first-of-type {
+  border-radius: 8px 8px 0 0;
+}
+
+option:last-of-type {
+  border-radius: 0 0 8px 8px;
+}
+
+::picker(select) {
+  border-radius: 8px;
+}
+
+option:not(option:last-of-type) {
+  border-bottom: none;
+}
+
+option:nth-of-type(odd) {
+  background: white;
+}
+
+option:hover,
+option:focus {
+  background: plum;
+}
+
+option .icon {
+  font-size: 1.6rem;
+  text-box: trim-both cap alphabetic;
+}
+
+selectedcontent .icon {
+  display: none;
+}
+
+option:checked {
+  font-weight: bold;
+}
+
+option::checkmark {
+  order: 1;
+  margin-left: auto;
+  content: "☑️";
+}
+
+::picker(select) {
+  opacity: 0;
+  transition: all 0.4s allow-discrete;
+}
+
+:open::picker(select) {
+  opacity: 1;
+}
+
+@starting-style {
+  :open::picker(select) {
+    opacity: 0;
+  }
+}
+
+/* ::picker(select) {
+  top: calc(anchor(bottom) + 1px);
+  left: anchor(10%);
+} */
