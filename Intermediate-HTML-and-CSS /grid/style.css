@@ -1,0 +1,18 @@
+.container {
+    height: 100vh;
+    display: grid;
+    /* grid-template-columns: 100px 70px; */
+    /* grid-template-rows: 50px 50px; */
+    grid-template: 220px 70px / 80px 50px;
+    /* row  row    column column */
+    /* grid-auto-rows: 60px; */
+    grid-auto-columns: 160px;
+    grid-auto-flow: column;
+    gap: 50px 100px;
+      /* row:gap  column:gap */
+}
+
+.container > div {
+    border: 1px solid red;
+    padding: 2rem;
+}
