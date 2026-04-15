@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.container {
+    display: grid;
+    grid-template: 100px 100px 100px / 100px 100px 100px;
+    gap: 1rem 2rem;
+}
+
+.item {
+    border: 1px solid black;
+    background-color: orange;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+}
+
+.first-row {
+    background-color: pink;
+}
+
+.last-column {
+    background-color: skyblue;
+}
+
+/* Container 2 */
+
+.container2 {
+    display: inline-grid;
+    background-color: lightblue;
+    grid-template: 100px 100px 100px 100px 100px / 100px 100px 100px 100px 100px;
+    grid-template-areas:
+    "living-room living-room living-room living-room living-room"
+    "living-room living-room living-room living-room living-room"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "bedroom bedroom bathroom kitchen kitchen"
+    "closet closet . kitchen kitchen"
+}
+
+.room {
+    border: 1px solid black;
+    text-align: center;
+}
+
+#living-room {
+    /* grid-column: 1 / 6; */
+    /* grid-row: 1 / 3; */
+
+    /* more precise shorthand property */
+    /* grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end */
+    
+    /* grid-area: 1 / 1 / 3 / 6; */
+
+    grid-area: living-room;
+}
+
+#bathroom {
+    /* grid-row: 3 / 6; */
+    /* grid-area: 3 / 3 / 6 / 4; */
+    grid-area: bathroom;
+    background-color: rgb(173, 230, 185);
+}
+
+#bedroom {
+    /* grid-column: 1 / 3;
+    grid-row: 3 / 5; */
+    /* grid-area: 3 / 1 / 5 / 3; */
+    grid-area: bedroom;
+    background-color: rgb(230, 173, 195);
+}
+
+#kitchen {
+    /* grid-column: 4 / 6;
+    grid-row: 3 / 6; */
+    /* grid-area: 3 / 4 / 6 / 6; */
+    grid-area: kitchen;
+    background-color: rgb(179, 173, 230);
+}
+
+#closet {
+    /* grid-column: 1 / 3; */
+    /* grid-area: 5 / 1 / 6 / 3; */
+    grid-area: closet;
+    background-color: rgb(210, 230, 173);
+}
