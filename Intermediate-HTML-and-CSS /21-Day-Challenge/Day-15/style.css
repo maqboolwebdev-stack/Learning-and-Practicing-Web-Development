@@ -1,0 +1,28 @@
+body {
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+div {
+    width: 30%;
+    height: 40%;
+    background-color: mediumaquamarine;
+}
+
+
+@media (max-width: 1000px) {
+    div {
+        background-color: rgb(7, 205, 0);
+    }
+}
+        @media (max-width: 800px) {
+            div {
+                background-color: rgb(205, 0, 171);
+            }
+        }
+@media (max-width: 600px) {
+    div {
+        background-color: mediumblue;
+    }
+}
