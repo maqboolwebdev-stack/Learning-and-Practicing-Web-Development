@@ -78,46 +78,106 @@ Player.prototype.sayHello = function() {
   console.log("Hello, I'm a player!");
 };
 
-player.sayHello();
-player2.sayHello();
+// player.sayHello();
+// player2.sayHello();
 
-console.log(player.prototype);
+// console.log(player.prototype);
 
-// Player.prototype.__proto__
-Object.getPrototypeOf(Player.prototype) === Object.prototype; // true
+// Object.getPrototypeOf(Player.prototype) === Object.prototype; // true
 
-// Output may slightly differ based on the browser
-player.valueOf(); // Output: Object { name: "waq", marker: "o", sayName: sayName() }
+// player.valueOf(); 
 
 
-function Person(name) {
-  this.name = name;
+// function Person(name) {
+//   this.name = name;
+// }
+
+// Person.prototype.sayName = function() {
+//   console.log(`Hello, I'm ${this.name}!`);
+// };
+
+// function Player(name, marker) {
+//   this.name = name;
+//   this.marker = marker;
+// }
+
+// Player.prototype.getMarker = function() {
+//   console.log(`My marker is "${this.marker}"`);
+// };
+
+// Object.getPrototypeOf(Player.prototype);
+
+// Object.setPrototypeOf(Player.prototype, Person.prototype);
+// Object.getPrototypeOf(Player.prototype); 
+
+// const player1 = new Player("steve", "X");
+// const player2 = new Player("also steve", "O");
+
+// player1.sayName(); 
+// player2.sayName(); 
+
+// player1.getMarker(); 
+// player2.getMarker(); 
+
+
+
+function Team(captain, sport) {
+    this.captain = captain;
+    this.sport = sport;
 }
 
-Person.prototype.sayName = function() {
-  console.log(`Hello, I'm ${this.name}!`);
-};
 
-function Player(name, marker) {
-  this.name = name;
-  this.marker = marker;
+Team.prototype.info = function() {
+    console.log(`The captain is ${this.captain} of sport ${this.sport}`);
 }
 
-Player.prototype.getMarker = function() {
-  console.log(`My marker is "${this.marker}"`);
+const firstTeam = new Team('Ali', 'Cricket');
+
+
+firstTeam.info();
+
+function Car(brand, model, year) {
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+}
+
+function Car(brand, model, year) {
+    if (!brand || !model || !year) {
+        throw new Error("All fields required");
+    }
+
+    this.brand = brand;
+    this.model = model;
+    this.year = year;
+}
+
+Car.prototype.getInfo = function() {
+    return `This car is ${this.brand} ${this.model} from ${this.year}`;
 };
 
-Object.getPrototypeOf(Player.prototype); // returns Object.prototype
 
-// Now make `Player` objects inherit from `Person`
-Object.setPrototypeOf(Player.prototype, Person.prototype);
-Object.getPrototypeOf(Player.prototype); // returns Person.prototype
+// Child constructor
+function ElectricCar(brand, model, year, battery) {
+    Car.call(this, brand, model, year); // inherit properties
+    this.battery = battery;
+}
 
-const player1 = new Player("steve", "X");
-const player2 = new Player("also steve", "O");
+// Inherit prototype
+ElectricCar.prototype = Object.create(Car.prototype);
 
-player1.sayName(); // Hello, I'm steve!
-player2.sayName(); // Hello, I'm also steve!
+// Fix constructor
+ElectricCar.prototype.constructor = ElectricCar;
 
-player1.getMarker(); // My marker is "X"
-player2.getMarker(); // My marker is "O"
+// Add method
+ElectricCar.prototype.getBatteryInfo = function() {
+    return `Battery capacity is ${this.battery}`;
+};
+
+
+// Test
+const ev1 = new ElectricCar('Tesla', 'Model S', 2022, 5555);
+
+console.log(ev1.getInfo());         // inherited
+console.log(ev1.getBatteryInfo());  // own
+
