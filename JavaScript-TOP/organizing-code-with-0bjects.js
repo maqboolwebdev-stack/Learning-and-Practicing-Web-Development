@@ -181,3 +181,112 @@ const ev1 = new ElectricCar('Tesla', 'Model S', 2022, 5555);
 console.log(ev1.getInfo());         // inherited
 console.log(ev1.getBatteryInfo());  // own
 
+
+let x = new Object();
+
+let btn = document.querySelector('button');
+let h1 = document.createElement('h1');
+let h2 = document.createElement('h1');
+document.body.append(h1, h2)
+
+btn.addEventListener('click', function() {
+    let today = new Date();
+    h1.textContent = today;
+    h2.textContent = 'waqas'
+    h2.style.color = 'red';
+    h2.style.backgroundColor = 'black'
+})
+
+// Initialize constructor functions
+function Hero(name, level) {
+  this.name = name;
+  this.level = level;
+}
+
+function Warrior(name, level, weapon) {
+  Hero.call(this, name, level);
+
+  this.weapon = weapon;
+}
+
+function Healer(name, level, spell) {
+  Hero.call(this, name, level);
+
+  this.spell = spell;
+}
+
+// Link prototypes and add prototype methods
+Object.setPrototypeOf(Warrior.prototype, Hero.prototype);
+Object.setPrototypeOf(Healer.prototype, Hero.prototype);
+
+Hero.prototype.greet = function () {
+  return `${this.name} says hello.`;
+}
+
+Warrior.prototype.attack = function () {
+  return `${this.name} attacks with the ${this.weapon}.`;
+}
+
+Healer.prototype.heal = function () {
+  return `${this.name} casts ${this.spell}.`;
+}
+
+// Initialize individual character instances
+const hero1 = new Warrior('Bjorn', 1, 'axe');
+const hero2 = new Healer('Kanin', 1, 'cure');
+
+console.log(hero2.greet());
+console.log(hero1.attack());
+
+let head = {
+  glasses: 1
+};
+
+let table = {
+    pen: 3,
+    __proto__: head,
+};
+
+let bed = {
+    sheet: 1,
+    pillow: 2,
+    __proto__: table,
+};
+
+let pockets = {
+    money: 2000,
+    __proto__: bed,
+};
+
+console.log(pockets.pen);
+console.log(bed.glasses);
+console.log(head.money);
+
+console.log(pockets.glasses);
+console.log(table.money);
+
+
+
+let hamster = {
+  stomach: [],
+
+  eat(food) {
+    this.stomach.push(food);
+  }
+};
+
+let speedy = {
+    stomach: [],
+  __proto__: hamster
+};
+
+let lazy = {
+    stomach: [],
+  __proto__: hamster
+};
+
+speedy.eat("apple");
+lazy.eat("banana");
+console.log(speedy.stomach);
+
+console.log(lazy.stomach);
