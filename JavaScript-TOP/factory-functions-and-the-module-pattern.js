@@ -79,3 +79,54 @@ laptop.refill(23);
 books.checkStock();
 books.buy(3);
 books.refill(11);
+
+
+function createUser(name) {
+  const discordName = "@" + name;
+
+  let reputation = 0;
+  const getReputation = () => reputation;
+  const giveReputation = () => { reputation++; };
+
+  return { name, discordName, getReputation, giveReputation };
+}
+
+const josh = createUser("josh");
+josh.giveReputation();
+josh.giveReputation();
+
+// logs { discordName: "@josh", reputation: 2 }
+console.log({
+  discordName: josh.discordName,
+  reputation: josh.getReputation()
+});
+
+
+const calculator = (() => {
+  let lastResult;
+
+  const add = (a, b) => {
+    lastResult = a + b;
+    return lastResult;
+  };
+  const subtract = (a, b) => {
+    lastResult = a - b;
+    return lastResult;
+  };
+  const multiply = (a, b) => {
+    lastResult = a * b;
+    return lastResult;
+  };
+  const divide = (a, b) => {
+    lastResult = a / b;
+    return lastResult;
+  };
+  const getLastResult = () => lastResult;
+
+  return { add, subtract, multiply, divide, getLastResult };
+})();
+
+console.log(calculator.add(3, 5));
+console.log(calculator.subtract(6, 2));
+console.log(calculator.getLastResult());
+console.log(calculator.multiply(14, 5534));
