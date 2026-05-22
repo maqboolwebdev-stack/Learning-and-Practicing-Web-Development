@@ -7,3 +7,17 @@ for(let i = 1; i <= num1; i++) {
         console.log(i);
     }
 };
+
+// Q2 Find the sum of all odd numbers up to N
+
+let num2 = 10;
+let sumOfOddNum = 0;
+
+for(let i = 1; i <= num2; i++) {
+    if(i % 2 === 1) {
+        sumOfOddNum = i + sumOfOddNum;
+        // console.log(i);
+    }
+}
+console.log(sumOfOddNum);
+
