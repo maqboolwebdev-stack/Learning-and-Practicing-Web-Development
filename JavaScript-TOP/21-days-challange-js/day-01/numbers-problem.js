@@ -22,3 +22,13 @@ for(let i = 0; i <= number2; i++) {
         console.log(i);
     }
 }
+
+// Q4 print sum of n natural numbers
+
+let number3 = 5;
+let sum = 0;
+
+for(let i = 0; i <= number3; i++) {
+    sum = i + sum;
+}
+console.log(sum);
