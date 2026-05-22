@@ -32,3 +32,14 @@ for(let i = 0; i <= number3; i++) {
     sum = i + sum;
 }
 console.log(sum);
+
+// Q5 Product (Factorial) of N
+
+console.time();
+let number4 = 5;
+let f = 1;
+for(let i = 1; i <= number4; i++) {
+    f *= i;
+}
+console.log(f);
+console.timeEnd();
