@@ -36,3 +36,24 @@ function checkNumberStatus(a) {
 checkNumberStatus(3);
 checkNumberStatus(-3.9);
 checkNumberStatus(0.1);
+
+// Q3 Calculate Electricity Bill
+
+function calculateElectricityBill(units) {
+    let bill;
+    if(units <= 100) {
+        bill = units * 5;
+    } else if(units <= 200) {
+        bill = (100 * 5) + (units - 100) * 7;
+    } else if(units <= 300) {
+        bill = (100 * 5) + (100 * 7) + (units - 200) * 10;
+    } else if(units >= 300) {
+        bill = (100 * 5) + (100 * 7) + (100 * 10) + (units - 300) * 12;
+    } else {
+        console.log('Invalid Units');
+        return;
+    }
+    console.log(`Total Bill: PKR-${bill}`);
+};
+
+calculateElectricityBill(230);
