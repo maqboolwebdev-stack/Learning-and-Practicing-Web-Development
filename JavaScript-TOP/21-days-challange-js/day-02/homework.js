@@ -19,3 +19,24 @@ characterChecker('a');
 characterChecker('A');
 characterChecker('5');
 characterChecker('%');
+
+// Q2 Check triangle type using sides and angles
+
+function checkTriangle(a, b, c){
+    let triangleResult;
+    if((a * a + b * b) === c * c) {
+        triangleResult = 'Right-Angled Triangle';
+    } else if((a === b) && (b === c && c === a)) {
+        triangleResult = 'Equilateral Triangle';
+    } else if(a === b || b === c) {
+        triangleResult = 'Isosceles Triangle';
+    } else {
+        triangleResult = 'Scalene';
+    }
+    console.log(triangleResult);
+};
+
+checkTriangle(3, 4, 5);
+checkTriangle(3, 3, 3);
+checkTriangle(5, 5, 8);
+checkTriangle(2, 11, 10);
