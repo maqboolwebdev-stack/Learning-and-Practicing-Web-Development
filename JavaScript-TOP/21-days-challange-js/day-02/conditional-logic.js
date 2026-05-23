@@ -19,3 +19,20 @@ function findMaximumOfThree(a, b, c) {
 findMaximumOfThree(122, 123, 23)
 findMaximumOfThree(442, 12, 23)
 
+// Q2 Check if Number is Positive, Negative, or Zero
+
+function checkNumberStatus(a) {
+    let status;
+    if(a < 0) {
+        status = `${a} is a Negative`;
+    } else if(a === 0) {
+        status = `${a} is a Zero`;
+    } else {
+        status = `${a} is a Positive`;
+    }
+    console.log(status);
+};
+
+checkNumberStatus(3);
+checkNumberStatus(-3.9);
+checkNumberStatus(0.1);
