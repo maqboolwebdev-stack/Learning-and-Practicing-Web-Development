@@ -88,3 +88,57 @@ do {
     counter += step;
     console.log(counter);
 } while (counter <= 100);
+
+// for loop
+
+// for(initialize variable; condition; statement) {
+//     code to be executed
+// }
+
+for (let i = 0; i <= 10; i++) {
+    console.log(i);
+}
+
+let arr = [];
+
+for(let i = 1; i <= 100; i++) {
+    arr.push(i);
+};
+
+let arrTotal = 0;
+
+arr.forEach((add) => {
+    arrTotal += add;
+});
+
+console.log(arr);
+console.log(arrTotal);
+
+let arr2 = [];
+
+for (let i = 0; i <= 100; i = i + 2) {
+    arr2.push(i);
+};
+
+let arrTotal2 = 0;
+
+arr2.forEach((add) => {
+    arrTotal2 += add;
+});
+
+console.log(arr2);
+console.log(arrTotal2);
+
+// Practice Exercise 5.3
+
+let myWork = [];
+
+for (let i = 1; i <= 10; i++) {
+    let obj = {
+        lesson: i,
+        status: i % 2 === 0? false : true,
+    };
+    myWork.push(obj)
+}
+
+console.log(myWork);
