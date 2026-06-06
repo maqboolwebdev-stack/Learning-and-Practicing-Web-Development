@@ -1,8 +1,8 @@
-// // WHILE LOOP
+// WHILE LOOP
 
-// // while(condition) {
-// //      code that gets executed as long as the condition is true
-// // }
+// while(condition) {
+//      code that gets executed as long as the condition is true
+// }
 
 // let i = 0;
 // while (i < 10) {
@@ -50,19 +50,41 @@
 
 // Practice Exercise 5.1
 
-const maxVale = 5;
-const solution = Math.floor(Math.random() * maxVale) + 1;
-let isCorrect = false;
+// const maxVale = 5;
+// const solution = Math.floor(Math.random() * maxVale) + 1;
+// let isCorrect = false;
 
-if(!isCorrect) {
-    const userGuess = Number(prompt(`Guess a between 1 to ${maxVale}`))
+// if(!isCorrect) {
+//     const userGuess = Number(prompt(`Guess a between 1 to ${maxVale}`))
 
-    if(userGuess === solution) {
-        isCorrect = true;
-        console.log('Correct you guessed the number');
-    } else if (userGuess > solution) {
-        console.log('To high! try again');
-    } else {
-        console.log('To low! try again');
-    }
-}
+//     if(userGuess === solution) {
+//         isCorrect = true;
+//         console.log('Correct you guessed the number');
+//     } else if (userGuess > solution) {
+//         console.log('To high! try again');
+//     } else {
+//         console.log('To low! try again');
+//     }
+// }
+
+//  DO-WHILE LOOP
+
+// do {
+// code to be executed if condition is true 
+// } while(condition)
+
+// let number;
+
+// do {
+// number = prompt('Please enter a number between 0 to 100');
+// } while(!(number >= 0 && number < 100));
+
+// Practice Exercise 5.2
+
+let counter = 0;
+let step = 5;
+
+do {
+    counter += step;
+    console.log(counter);
+} while (counter <= 100);
