@@ -130,3 +130,47 @@ console.log(calculator.add(3, 5));
 console.log(calculator.subtract(6, 2));
 console.log(calculator.getLastResult());
 console.log(calculator.multiply(14, 5534));
+
+
+function createUser(name) {
+  const discordName = "@" + name;
+
+  let reputation = 0;
+  const getReputation = () => reputation;
+  const giveReputation = () => { reputation++; };
+
+  return { name, discordName, getReputation, giveReputation };
+}
+
+const josh = createUser("josh");
+josh.giveReputation();
+josh.giveReputation();
+
+// logs { discordName: "@josh", reputation: 2 }
+console.log({
+  discordName: josh.discordName,
+  reputation: josh.getReputation()
+});
+
+function createPlayer(name, level) {
+  const { getReputation, giveReputation } = createUser(name);
+
+  const getLevel = () => level;
+  const increaseLevel = () => { level++; };
+  return {
+    name,
+    getReputation,
+    giveReputation,
+    getLevel,
+    increaseLevel,
+  };
+}
+
+
+function createPlayer(name, level) {
+  const user = createUser(name);
+
+  const getLevel = () => level;
+  const increaseLevel = () => { level++; };
+  return Object.assign({}, user, { getLevel, increaseLevel });
+}
