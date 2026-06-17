@@ -142,3 +142,37 @@ for (let i = 1; i <= 10; i++) {
 }
 
 console.log(myWork);
+
+// Nested loops
+
+let arrayOfArrays = [];
+
+for (let i = 0; i < 3; i++) {
+    arrayOfArrays.push([]);
+    for (let j = 1; j < 7; j++) {
+        arrayOfArrays[i].push(j);
+    }
+};
+
+console.table(arrayOfArrays);
+
+// Practice exercise 5.4
+
+let myTable = [];
+
+const rows = 20;
+const column = 10;
+
+let counter2 = 0;
+
+for (let i = 0; i <= rows; i++) {
+    let tempTable = [];
+    // myTable.push([]);
+    for (let j = 1; j <= column; j++) {
+        counter2++;
+        tempTable.push(counter2);
+    }
+    myTable.push(tempTable);
+}
+
+console.table(myTable);
