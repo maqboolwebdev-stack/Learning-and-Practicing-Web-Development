@@ -176,3 +176,31 @@ for (let i = 0; i <= rows; i++) {
 }
 
 console.table(myTable);
+
+// loops and array
+
+let names = ['Ali', 'Bobbi', 'John', 'Same', 'Maria'];
+
+for(let i = 0; i < names.length; i++) {
+    console.log(names[i]);
+}
+
+let names2 = ['Ali', 'Bobbi', 'John', 'Same', 'Maria'];
+
+for(let i = 0; i < names2.length; i++) {
+    names2[i] = 'Hello ' + names2[i];
+}
+
+console.log(names2);
+
+let names3 = ['Ali', 'Bobbi', 'John', 'Same', 'Maria'];
+
+for(let i = 0; i < names3.length; i++) {
+    if(names3[i].startsWith('M')) {
+        delete names3[i];
+        continue;
+    }
+    names3[i] = 'Hey ' + names3[i];
+}
+
+console.log(names3);
